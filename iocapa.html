@@ -1,0 +1,226 @@
+<html>
+    <head>
+    <title>Curso de Bootstrap</title>
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;1,100&display=swap" rel="stylesheet">
+
+
+    <style>
+        
+            
+        
+        section {
+            color: white;
+            position: fixed;
+            margin: 250px 110px;
+            font-size: 2em;
+        }
+
+        section {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 100;
+        }
+
+        body {
+
+            background-image: url(fundo%20aaron.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            overflow: hidden;
+
+        }
+        
+         @media only screen and (max-width: 700px) {
+                 
+              body {
+
+            background-image: url(fundo%20aaronmob.jpg);
+            background-size: 960px 100%;
+            background-repeat: no-repeat;
+            overflow: hidden;
+
+        }
+
+           
+        }
+
+        /*posição do input*/
+        .label-float {
+            position: relative;
+            padding-top: 20px;
+
+
+        }
+
+        /* posição do label*/
+        .label-float label {
+            position: absolute;
+            pointer-events: none;
+            left: 15px;
+            top: 40;
+            transition: all .4s;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 200;
+            -webkit-transition: all .3s ease-out;
+            -moz-transition: all .3s ease-out;
+            color: whitesmoke;
+            
+        }
+
+
+        .label-float input:focus+label,
+        .label-float input:not(:placeholder-shown)+label {
+            margin-top: -20;
+            font-size: 90%;
+            font-family: 'Montserrat', sans-serif;
+            
+
+        }
+
+        .label-float input {
+
+            outline: none;
+            border-radius: 5px;
+            border-style: none;
+            background-color: rgba(255, 255, 255, .1);
+            width: 380px;
+            height: 60px;
+            color: white;
+            padding:15;
+            padding-top: 30;
+            
+            
+        }
+
+     
+        
+
+        .form-group {
+            position: fixed;
+            border-radius: 5px;
+            margin: 300px 100px;
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            height: auto;
+            padding: 5px;
+
+
+
+        }
+
+        .card {
+            position: relative;
+            border: none;
+            background-color: rgba(255, 255, 255, .5);
+            width: 220px;
+            line-height: 0;
+            text-align: justify;
+            height: 30px;
+            padding: 15px;
+            border-radius: 5px;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            text-shadow: grey 1px 1px 3px;
+            box-shadow: black;
+            margin: -.5
+
+
+        }
+
+        .caret {
+            
+            margin: 1.5px 15px;
+            color: rgba(255, 255, 255, .4);
+            transform: rotate(180deg) scale(1.9);
+        }
+
+        #aviso {
+            display: none;
+            padding: 1px
+            
+        }
+
+        button {
+            position: fixed;
+            margin: 418 380;
+            border-radius: 20px;
+            height: 35px;
+            width: 85px;
+            border-style: none;
+            color: deeppink;
+            background-color: azure;
+            font-weight: 700;
+        }
+
+        button:hover {
+            background-color: white;
+            border: solid;
+        }
+
+        button:active {
+
+            border: solid;
+            background-color: lightpink;
+            border-color: deeppink;
+            color: whitesmoke;
+
+        }
+        
+        
+    </style>
+
+</head>
+
+<body>
+    <section> <b>ioasys</b> Books </section>
+    <div class="form-group">
+
+        <div class="label-float">
+            <input type="email" placeholder=" "><label>E-mail</label>
+        </div>
+
+        <div class="label-float">
+            <input type="password" placeholder=" "><label>Senha</label>
+            <div id="aviso">
+                <span class="caret"></span>
+                <div class="card" id="cartao">
+                    E-mail ou senha incorretos.
+
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <button class="button" id="botao">Entrar </button>
+
+
+    <script src="jquery-3.6.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="_js/script.js"></script>
+    <script>
+        function mostrarCartao() {
+            $('#aviso').slideDown()
+
+        }
+
+        function esconderCartao() {
+            $('#aviso').fadeOut()
+
+        }
+
+        $(function(e) {
+            $('#botao').click(mostrarCartao)
+            $('input').click(esconderCartao)
+        });
+    </script>
+
+</body></html>
