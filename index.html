@@ -297,30 +297,6 @@
 <Style>
 
 
-   
- <script src="jquery-3.6.1.min.js"></script>
-    <script src="bootstrap.min.js"></script>
-    <script src="_js/script.js"></script>
-    <script src="https://kit.fontawesome.com/8effd47e92.js" crossorigin="anonymous"></script>
-    <script>
-        function mostrarLivro() {
-            $('#clique').fadeToggle();
-            $('.row, nav, button').css("filter", "blur(1.5px)");
-        }
-
-        function esconderLivro() {
-            $('#clique').fadeOut();
-            $('.row, nav, button').css("filter", "blur(0px)");
-
-        }
-        $(function(e) {
-            $('div').click(mostrarLivro)
-        });
-
-        $(function(e) {
-            $('#clique').click(esconderLivro)
-        });
-    </script>
 
 </head>
 
@@ -600,6 +576,30 @@
     </button>
     <button class="material-symbols-outlined">chevron_left</button>
 
+   
+ <script src="jquery-3.6.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="_js/script.js"></script>
+    <script src="https://kit.fontawesome.com/8effd47e92.js" crossorigin="anonymous"></script>
+    <script>
+        function mostrarLivro() {
+            $('#clique').fadeToggle();
+            $('.row, nav, button').css("filter", "blur(1.5px)");
+        }
+
+        function esconderLivro() {
+            $('#clique').fadeOut();
+            $('.row, nav, button').css("filter", "blur(0px)");
+
+        }
+        $(function(e) {
+            $('div').click(mostrarLivro)
+        });
+
+        $(function(e) {
+            $('#clique').click(esconderLivro)
+        });
+    </script>
    
 
 </body></html>
